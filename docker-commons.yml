@@ -1,0 +1,16 @@
+version: "2.3"
+services:
+  jupyter:
+    image: vshulyak/workstation_image:latest
+    networks:
+      - default
+    privileged: true
+    env_file:
+      - ./.env
+    ports:
+      - "8888:8888"  # Jupyter
+      - "6006:6006"  # Tensorboard
+      - "5000:5000"  # MLFlow
+
+networks:
+  default:

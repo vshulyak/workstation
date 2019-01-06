@@ -1,0 +1,11 @@
+version: "2.3"
+services:
+  jupyter:
+    extends:
+      file: docker-commons.yml
+      service: jupyter
+    environment:
+      - RUN_ON_GPU=true
+    runtime: nvidia
+    volumes:
+      - ${PWD}/:${PWD}
