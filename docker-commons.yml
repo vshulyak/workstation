@@ -11,6 +11,6 @@ services:
       - "8888:8888"  # Jupyter
       - "6006:6006"  # Tensorboard
       - "5000:5000"  # MLFlow
-
+      - "8889:8889"  # ray
 networks:
   default:
